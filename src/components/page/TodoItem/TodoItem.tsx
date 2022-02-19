@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import { ITodos } from '../../../store/todos';
 import { TodoContext, ITodoContext } from '../../../context/todoContext';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import styles from './todoItem.module.css';
 
 type TodosProps = {
@@ -25,7 +26,7 @@ const TodoItem = ({ todo }: TodosProps) => {
       <input className={styles.checkbox} type="checkbox" onChange={changeTodoState} />
       <span className={styles.todoName}>{todo.todoName}</span>
       <button onClick={deleteTodo} className={styles.button}>
-        <i className="fas fa-trash"></i>
+        <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
       </button>
     </li>
   );

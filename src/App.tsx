@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import styles from './App.module.css';
-import '@fortawesome/fontawesome-free/js/all.js';
 import { ITodoContext, TodoContext } from './context/todoContext';
 import InputTodo from './components/page/InputTodo/InputTodo';
 import Todos from './components/page/Todos/Todos';
