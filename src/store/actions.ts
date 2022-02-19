@@ -1,1 +1,1 @@
-export type Actions = { type: 'ADD_TODO' } | { type: 'DELETE_TODO' };
+export type Actions = { type: 'ADD_TODO' } | { type: 'DELETE_TODO' } | { type: 'TODO_CHANGE' }; //

@@ -1,0 +1,22 @@
+.form {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+}
+
+.input {
+  font-size: 2rem;
+  padding: 0.2em 0.3em;
+  width: 300px;
+}
+
+.submit {
+  font-size: 1.5rem;
+  background: #6664cb;
+  color: #fff;
+  border: 2px solid #4b4aa4;
+  border-radius: 10px;
+  outline: 0;
+  padding: 0.2em 0.5em;
+  cursor: pointer;
+}

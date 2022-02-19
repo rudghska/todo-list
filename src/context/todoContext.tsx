@@ -6,13 +6,14 @@ type ChildrenNode = {
   children: React.ReactNode;
 };
 
-interface ITodoContext {
+export interface ITodoContext {
   addTodo: (initData: ITodos) => void;
+  todoStateChange: (todo: ITodos) => void;
   deleteTodo: (todo: ITodos) => void;
   todos: ITodos[];
 }
 
-const TodoContext = createContext<ITodoContext | null>(null);
+export const TodoContext = createContext<ITodoContext | null>(null);
 
 export const TodoProvider = ({ children }: ChildrenNode): JSX.Element => {
   const [todos, dispatch] = useReducer(todoReducer, []);
@@ -21,15 +22,18 @@ export const TodoProvider = ({ children }: ChildrenNode): JSX.Element => {
     dispatch({ action: { type: 'ADD_TODO' }, todo: initData });
   };
 
+  const todoStateChange = (todo: ITodos) => {
+    dispatch({ action: { type: 'TODO_CHANGE' }, todo });
+  };
+
   const deleteTodo = (todo: ITodos) => {
     dispatch({ action: { type: 'DELETE_TODO' }, todo });
   };
 
-  const todoContext = useMemo((): ITodoContext => ({ addTodo, deleteTodo, todos }), [
-    todos,
-    addTodo,
-    deleteTodo,
-  ]);
+  const todoContext = useMemo(
+    (): ITodoContext => ({ addTodo, todoStateChange, deleteTodo, todos }),
+    [todos, todoStateChange, addTodo, deleteTodo]
+  );
 
   return <TodoContext.Provider value={todoContext}>{children}</TodoContext.Provider>;
 };

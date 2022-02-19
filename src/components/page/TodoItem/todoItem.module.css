@@ -1,0 +1,30 @@
+.checkbox:checked + .todoName {
+  text-decoration: line-through;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.todoName {
+  font-size: 2rem;
+  margin-left: 0.5em;
+}
+
+.button {
+  margin-left: auto;
+  font-size: 1.8rem;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  align-self: flex-end;
+  color: gray;
+  transition: 0.5s;
+}
+
+.button:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}

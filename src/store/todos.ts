@@ -4,6 +4,6 @@ export interface ITodos {
   id: number;
 }
 
-export interface ITotalCount {
-  totalCount: number;
-}
+// export interface ITotalCount {
+//   totalCount: number;
+// }
