@@ -12,15 +12,11 @@ export const todoReducer = (todos: ITodos[], { action, todo }: ITodoAndActions):
     case 'ADD_TODO':
       return [...todos, todo];
     case 'TODO_CHANGE':
-      console.log('change');
-      console.log(todo);
       newTodos = todos.filter(bTodo => {
         if (bTodo.id === todo.id && !bTodo.isDone) {
-          console.log('f');
           bTodo.isDone = true;
           return bTodo;
         } else if (bTodo.id === todo.id && bTodo.isDone) {
-          console.log('s');
           bTodo.isDone = false;
           return bTodo;
         }

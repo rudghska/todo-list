@@ -10,7 +10,7 @@ function App() {
     <div className={styles.todoApp}>
       <header className={styles.header}>
         <h1 className={styles.title}>투두 리스트</h1>
-        <p className={styles.howMany}>몇개 해야함? : {todoContext.todos.length}개</p>
+        <p className={styles.howMany}>할 일 : {todoContext.todos.length}개</p>
       </header>
       <InputTodo />
       <Todos />
