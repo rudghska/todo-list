@@ -9,7 +9,7 @@ function App() {
   return (
     <div className={styles.todoApp}>
       <header className={styles.header}>
-        <h1 className={styles.title}>투두 리스트</h1>
+        <h1 className={styles.title}>To Do List</h1>
         <p className={styles.howMany}>할 일 : {todoContext.todos.length}개</p>
       </header>
       <InputTodo />
