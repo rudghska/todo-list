@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { ITodos } from '../../types/todos';
-import { TodoContext, ITodoContext } from '../../context/todoContext';
+import { TodoContext } from '../../context/todoContext';
+import { ITodoContext } from '../../types/todos';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import styles from './todoItem.module.css';

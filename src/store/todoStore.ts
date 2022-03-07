@@ -2,13 +2,14 @@ import { ITodos } from '../types/todos';
 import { Actions } from './actions';
 
 interface ITodoAndActions {
-  action: Actions;
+  type: Actions;
   todo: ITodos;
 }
 
-export const todoReducer = (todos: ITodos[], { action, todo }: ITodoAndActions): ITodos[] => {
+export const todoReducer = (todos: ITodos[], action: ITodoAndActions): ITodos[] => {
+  const { type, todo } = action;
   let newTodos: ITodos[];
-  switch (action.type) {
+  switch (type) {
     case 'ADD_TODO':
       return [...todos, todo];
     case 'TODO_CHANGE':

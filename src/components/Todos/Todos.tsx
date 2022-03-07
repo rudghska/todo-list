@@ -1,7 +1,8 @@
 import React, { useContext, useRef, useEffect } from 'react';
-import { TodoContext, ITodoContext } from '../../context/todoContext';
+import { TodoContext } from '../../context/todoContext';
 import TodoItem from '../TodoItem/TodoItem';
 import styles from './todos.module.css';
+import { ITodoContext } from '../../types/todos';
 
 const Todos = () => {
   const todoContext = useContext(TodoContext)! as ITodoContext;

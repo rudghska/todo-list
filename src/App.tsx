@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import styles from './App.module.css';
-import { ITodoContext, TodoContext } from './context/todoContext';
+import { TodoContext } from './context/todoContext';
+import { ITodoContext } from './types/todos';
 import InputTodo from './components/InputTodo/InputTodo';
 import Todos from './components/Todos/Todos';
 
