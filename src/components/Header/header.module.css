@@ -1,0 +1,13 @@
+.header {
+  padding: 50px 50px 0 50px;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.howMany {
+  font-size: 2rem;
+  margin-top: 1em;
+  color: #7d7e8e;
+}

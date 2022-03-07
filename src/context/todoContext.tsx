@@ -10,7 +10,6 @@ type ChildrenNode = {
 export const TodoContext = createContext<ITodoContext | null>(null);
 
 export const TodoProvider = ({ children }: ChildrenNode): JSX.Element => {
-  console.log('ch', children);
   const [todos, dispatch] = useReducer(todoReducer, []);
 
   const addTodo = (initData: ITodos): void => {

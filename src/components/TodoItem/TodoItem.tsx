@@ -12,7 +12,7 @@ type TodosProps = {
 };
 
 const TodoItem = ({ todo }: TodosProps) => {
-  const todoContext = useContext(TodoContext)! as ITodoContext;
+  const todoContext = useContext(TodoContext) as ITodoContext;
 
   const deleteTodo = () => {
     todoContext.deleteTodo(todo);
