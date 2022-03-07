@@ -1,3 +1,3 @@
 # Todo - List (typescript, React)
 
-![사진](./src/image/todo-result.png)
+![사진](./public/image/todo-result.png)

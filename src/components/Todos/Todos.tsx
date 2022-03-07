@@ -1,5 +1,5 @@
 import React, { useContext, useRef, useEffect } from 'react';
-import { TodoContext, ITodoContext } from '../../../context/todoContext';
+import { TodoContext, ITodoContext } from '../../context/todoContext';
 import TodoItem from '../TodoItem/TodoItem';
 import styles from './todos.module.css';
 

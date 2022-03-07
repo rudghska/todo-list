@@ -1,4 +1,4 @@
-import { ITodos } from './todos';
+import { ITodos } from '../types/todos';
 import { Actions } from './actions';
 
 interface ITodoAndActions {

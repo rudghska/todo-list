@@ -1,5 +1,5 @@
 import React, { useContext, useRef } from 'react';
-import { TodoContext, ITodoContext } from '../../../context/todoContext';
+import { TodoContext, ITodoContext } from '../../context/todoContext';
 
 import styles from './inputTodo.module.css';
 

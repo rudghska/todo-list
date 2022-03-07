@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import styles from './App.module.css';
 import { ITodoContext, TodoContext } from './context/todoContext';
-import InputTodo from './components/page/InputTodo/InputTodo';
-import Todos from './components/page/Todos/Todos';
+import InputTodo from './components/InputTodo/InputTodo';
+import Todos from './components/Todos/Todos';
 
 function App() {
   const todoContext = useContext(TodoContext)! as ITodoContext;

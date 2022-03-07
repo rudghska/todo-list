@@ -1,5 +1,5 @@
 import React, { createContext, useReducer, useMemo } from 'react';
-import { ITodos } from '../store/todos';
+import { ITodos } from '../types/todos';
 import { todoReducer } from '../store/todoStore';
 
 type ChildrenNode = {
@@ -16,6 +16,7 @@ export interface ITodoContext {
 export const TodoContext = createContext<ITodoContext | null>(null);
 
 export const TodoProvider = ({ children }: ChildrenNode): JSX.Element => {
+  console.log('ch', children);
   const [todos, dispatch] = useReducer(todoReducer, []);
 
   const addTodo = (initData: ITodos): void => {
